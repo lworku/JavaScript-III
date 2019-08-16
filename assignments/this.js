@@ -38,15 +38,15 @@ function CatMaker(attributes) {
     this.name = attributes.name;
     this.age = attributes.age; 
     this.speak = function() {
-      return `Meow! I'm` + $this.name + `the` + $this.age + `talking cat`;
+      return `Meow! I'm ${this.name} the ${this.age}  talking cat.`;
     }
   }
 
   const tammy = new CatMaker({name: "Tammy", age: "immortal"});
   const nicola = new CatMaker({name: "Nicola", age: "1000 year old"})
   
-  tammy.speak();
-  nicola.speak();
+  console.log(tammy.speak());
+  console.log(nicola.speak());
 
 // Principle 4
 
