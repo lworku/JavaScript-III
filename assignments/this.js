@@ -10,12 +10,12 @@
 */
 
 // Principle 1
+console.log(this);
 
 function nameCountry(country) {
-    console.log(this);
-    return country;
-  }
-  nameCountry("USA");
+  return country; //alt+^ shifts selected lines up/down
+} 
+  console.log(nameCountry("USA"));
 
 
   
@@ -25,11 +25,11 @@ const alias = {
     greeting: 'Hello',
 
     intro: function(name) {
-      console.log(`${this.greeting} my name is ${name}`);
-      console.log(this);
+      return `${this.greeting} my name is ${name}`;
     }
   };
-  alias.intro('Janet Snakehole');
+  
+  console.log(alias.intro('Janet Snakehole'));
   
 
 // Principle 3
